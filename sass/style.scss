@@ -1,15 +1,42 @@
 @import "../libs/reset.scss";
+@import "../libs/mixins.scss";
 
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    @include font;
+}
+
+%shadow {
+    box-shadow: 1px 1px 10px rgb(107, 107, 107); 
+}
+
+header, footer {
+    background: #579c87;
+    padding: 2rem 0;
 }
 
 header {
-    background-color: #579c87;
+    #logo {
+        @include font($fontFamily: Arial, $fontSize: 3rem, $colorFont: #fdcb46, $fontWeight: 700);
+        text-align: center;
+    }
 }
 
-#logo {
-    font-weight: 700;
-    color: #fdcb46;
-    text-align: center;
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+
+    .gallery-item {
+        margin: 2rem;
+        a {
+            img {
+                @extend %shadow;
+                width: 370px;
+                height: auto;
+            }
+        }
+    }
 }
+
+
