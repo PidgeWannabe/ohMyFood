@@ -6,12 +6,13 @@
 }
 
 %shadow {
-    box-shadow: 1px 1px 10px rgb(107, 107, 107); 
+    box-shadow: 1px 1px 10px rgb(107, 107, 107);
 }
 
-header, footer {
+header,
+footer {
     background: #579c87;
-    padding: 2rem 0;
+    padding: 20px 0;
 }
 
 header {
@@ -25,14 +26,16 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 2rem;
+    margin: 20px;
+    
 
     .gallery-item {
-        margin: 2rem;
+        width: 450px;
+        margin: 20px;
         a {
             img {
                 @extend %shadow;
-                width: 370px;
+                max-width: 100%;
                 height: auto;
             }
         }
@@ -40,3 +43,14 @@ header {
 }
 
 
+button {
+    display: block;
+    font-size: 2rem;
+    width: 95%;
+    background: #579c87;
+    border-radius: 5px;
+    word-wrap: break-word;
+    padding: 20px;
+    border-style: none;
+    margin: auto;
+}
