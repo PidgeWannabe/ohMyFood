@@ -12,45 +12,69 @@
 header,
 footer {
     background: #579c87;
-    padding: 20px 0;
 }
 
 header {
+    padding: 40px 0;
     #logo {
         @include font($fontFamily: Arial, $fontSize: 3rem, $colorFont: #fdcb46, $fontWeight: 700);
         text-align: center;
     }
 }
 
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+#main {
     margin: 20px;
-    
+    .gallery {
 
-    .gallery-item {
-        width: 450px;
-        margin: 20px;
-        a {
-            img {
-                @extend %shadow;
-                max-width: 100%;
-                height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;      
+
+        .gallery-item {
+            width: 500px;
+            margin: 20px;
+
+            a {
+                img {
+                    @extend %shadow;
+                    max-width: 100%;
+                    height: auto;
+                }
             }
+        }
+
+        
+    }
+
+    button {
+        display: block;
+        font-size: 2rem;
+        width: 95%;
+        background: #579c87;
+        border-radius: 5px;
+        word-wrap: break-word;
+        padding: 20px;
+        border-style: none;
+        margin: 20px auto 40px auto;
+    }
+
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    font: {
+        size: 1.7rem;      
+    }
+    h2 {
+        padding: 20px 0;
+        a {
+            text-decoration: none;
+            font-size: 1.7rem;
         }
     }
 }
 
 
-button {
-    display: block;
-    font-size: 2rem;
-    width: 95%;
-    background: #579c87;
-    border-radius: 5px;
-    word-wrap: break-word;
-    padding: 20px;
-    border-style: none;
-    margin: auto;
-}
