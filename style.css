@@ -1,0 +1,99 @@
+/*! minireset.css v0.0.5 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select, textarea {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+  text-align: left;
+}
+
+* {
+  font-family: Arial;
+  font-size: 1rem;
+  color: #fdcb46;
+  font-weight: 400;
+}
+
+.gallery .gallery-item a img {
+  box-shadow: 1px 1px 10px #6b6b6b;
+}
+
+header,
+footer {
+  background: #579c87;
+  padding: 20px 0;
+}
+
+header #logo {
+  font-family: Arial;
+  font-size: 3rem;
+  color: #fdcb46;
+  font-weight: 700;
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+.gallery .gallery-item {
+  width: 450px;
+  margin: 20px;
+}
+.gallery .gallery-item a img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  display: block;
+  font-size: 2rem;
+  width: 95%;
+  background: #579c87;
+  border-radius: 5px;
+  word-wrap: break-word;
+  padding: 20px;
+  border-style: none;
+  margin: auto;
+}
+
+/*# sourceMappingURL=style.css.map */
