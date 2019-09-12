@@ -1,0 +1,14 @@
+@mixin font($fontFamily: Arial, $fontSize: 1rem, $colorFont: #fdcb46, $fontWeight: 400){
+    font-family: #{$fontFamily};
+    font-size: #{$fontSize};
+    color: #{$colorFont};
+    font-weight: #{$fontWeight};
+}
+
+@mixin button($background: #579c87, $color: #fdcb46, $padding: 20px, $listStyle: none){
+    padding: #{$padding};
+    background: #{$background};
+    text-decoration: #{$listStyle};
+    color: #{$color};
+}
+
