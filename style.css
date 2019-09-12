@@ -51,7 +51,7 @@ td, th {
   font-weight: 400;
 }
 
-#main .gallery .gallery-item a img {
+.main .singleMenu, .main .gallery .gallery-item a img {
   box-shadow: 1px 1px 10px #6b6b6b;
 }
 
@@ -63,6 +63,9 @@ footer {
 header {
   padding: 40px 0;
 }
+header a {
+  text-decoration: none;
+}
 header #logo {
   font-family: Arial;
   font-size: 3rem;
@@ -71,23 +74,49 @@ header #logo {
   text-align: center;
 }
 
-#main {
-  margin: 5px;
+.main {
+  margin: 5px 5px 150px 5px;
 }
-#main .gallery {
+.main .gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-#main .gallery .gallery-item {
+.main .gallery .gallery-item {
   width: 500px;
-  margin: 20px;
+  margin: 20px 10px 10px 10px;
 }
-#main .gallery .gallery-item a img {
-  max-width: 100%;
+.main .gallery .gallery-item a img {
+  width: 100%;
   height: auto;
+  display: block;
 }
-#main button {
+.main p {
+  margin: 20px 10px 40px 10px;
+  font-family: Arial;
+  font-size: 1.6rem;
+  color: #fdcb46;
+  font-weight: normal;
+  background: #579c87;
+  padding: 25px;
+}
+.main .menuName,
+.main #mentions-legales {
+  font-family: Arial;
+  font-size: 1.6rem;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
+}
+.main .singleMenu {
+  margin: 20px 10px 40px 10px;
+}
+.main .singleMenu img {
+  width: 100%;
+  display: block;
+}
+.main button {
   display: block;
   font-size: 2rem;
   width: 95%;
@@ -103,15 +132,82 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 0;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
   font-size: 1.7rem;
 }
 footer h2 {
-  padding: 20px 0;
+  padding: 10px 0;
 }
 footer h2 a {
   text-decoration: none;
   font-size: 1.7rem;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .main button {
+    width: 50%;
+  }
+  .main .singleMenu {
+    width: 80%;
+    margin: 20px auto 40px auto;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .main {
+    margin: 50px 30px 120px 30px;
+  }
+  .main button {
+    width: 30%;
+  }
+  .main .gallery .gallery-item {
+    width: 500px;
+    margin: 30px;
+  }
+  .main .menuName {
+    font-size: 2rem;
+  }
+  .main .singleMenu {
+    width: 70%;
+    margin: 20px auto 40px auto;
+  }
+  .main .singleMenu img {
+    width: 100%;
+    display: block;
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 40px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .main {
+    margin: 50px 30px 170px 30px;
+  }
+  .main .gallery .gallery-item {
+    width: 400px;
+    margin: 30px;
+  }
+  .main .menuName {
+    font-size: 2rem;
+  }
+  .main .singleMenu {
+    width: 60%;
+    margin: 20px auto 40px auto;
+  }
+  .main button {
+    width: 30%;
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 40px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

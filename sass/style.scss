@@ -1,9 +1,11 @@
 @import "../libs/reset.scss";
 @import "../libs/mixins.scss";
+@import "../libs/responsive.scss";
 
 * {
     @include font;
 }
+
 
 %shadow {
     box-shadow: 1px 1px 10px rgb(107, 107, 107);
@@ -16,34 +18,66 @@ footer {
 
 header {
     padding: 40px 0;
+
+    a {
+        text-decoration: none;
+    }
+
     #logo {
         @include font($fontFamily: Arial, $fontSize: 3rem, $colorFont: #fdcb46, $fontWeight: 700);
         text-align: center;
     }
 }
 
-#main {
-    margin: 5px;
+.main {
+
+    margin: 5px 5px 150px 5px;
+
     .gallery {
 
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;      
+        justify-content: center;
 
         .gallery-item {
             width: 500px;
-            margin: 20px;
+            margin: 20px 10px 10px 10px;
 
             a {
                 img {
                     @extend %shadow;
-                    max-width: 100%;
+                    width: 100%;
                     height: auto;
+                    display: block;
                 }
             }
         }
 
-        
+
+    }
+
+    p {
+        margin: 20px 10px 40px 10px;
+        @include font($fontFamily: Arial, $fontSize: 1.6rem, $colorFont: #fdcb46, $fontWeight: normal);
+        background: #579c87;
+        padding: 25px;
+    }
+
+    .menuName,
+    #mentions-legales {
+        @include font($fontFamily: Arial, $fontSize: 1.6rem, $colorFont: #000, $fontWeight: 600);
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .singleMenu {
+        margin: 20px 10px 40px 10px;
+        @extend %shadow;
+
+        img {
+            width: 100%;
+            display: block;
+        }
     }
 
     button {
@@ -60,21 +94,121 @@ header {
 
 }
 
+
+
 footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 0;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+
     font: {
-        size: 1.7rem;      
+        size: 1.7rem;
     }
+
     h2 {
-        padding: 20px 0;
+        padding: 10px 0;
+
         a {
             text-decoration: none;
             font-size: 1.7rem;
         }
     }
 }
+
+@media #{$tablet-up} {
+
+    .main {
+        button {
+            width: 50%;
+        }
+        .singleMenu {
+            width: 80%;
+            margin: 20px auto 40px auto;
+            
+        }
+    }
+    
+}
+
+@media #{$laptop-up} {
+    .main {
+        margin: 50px 30px 120px 30px;
+        button {
+            width: 30%;
+        }
+
+        .gallery {
+
+            .gallery-item {
+                width: 500px;
+                margin: 30px;
+
+            }
+        }
+
+        .menuName {
+            font-size: 2rem;
+        }
+
+        .singleMenu {
+            width: 70%;
+            margin: 20px auto 40px auto;
+            img {
+                width: 100%;
+                display: block;
+            }
+        }
+
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 40px;
+    }
+
+}
+
+@media #{$desktop-up}{
+
+    .main {
+    margin: 50px 30px 170px 30px;
+        .gallery {
+
+            .gallery-item {
+                width: 400px;
+                margin: 30px;
+
+            }
+        }
+
+        .menuName {
+            font-size: 2rem;
+        }
+    
+        .singleMenu {
+            // margin: 20px 10px 40px 10px;
+            width: 60%;
+            margin: 20px auto 40px auto;
+          
+        }
+
+        button {
+            width: 30%;
+        }
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 40px;
+    }
+
+}
+    
 
 
