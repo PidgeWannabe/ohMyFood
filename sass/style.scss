@@ -27,6 +27,30 @@ header {
         @include font($fontFamily: Arial, $fontSize: 3rem, $colorFont: #fdcb46, $fontWeight: 700);
         text-align: center;
     }
+
+    &+form {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        @extend %shadow;
+        padding: 10px 5px;
+
+        button {
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+        }
+
+        input[type="text"] {
+            border-style: none;
+            font-size: 1.5rem;
+            flex-grow: 1;
+
+            &:focus {
+                outline: #fdcb46 solid 1px;
+            }
+        }
+    }
 }
 
 .main {
@@ -42,6 +66,14 @@ header {
         .gallery-item {
             width: 500px;
             margin: 20px 10px 10px 10px;
+            transform: scale(1);
+            transition: transform 400ms ease-in-out;
+
+
+            &:hover {
+                transform: scale(1.05);
+                transition: transform 400ms ease-in-out;
+            }
 
             a {
                 img {
@@ -73,14 +105,24 @@ header {
     .singleMenu {
         margin: 20px 10px 40px 10px;
         @extend %shadow;
+        transform: scale(1);
+        transition: transform 400ms ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.1);
+            transition: transform 400ms ease-in-out;
+        }
 
         img {
             width: 100%;
             display: block;
+
         }
     }
 
-    button {
+    .button {
+
         display: block;
         font-size: 2rem;
         width: 95%;
@@ -90,11 +132,45 @@ header {
         padding: 20px;
         border-style: none;
         margin: 20px auto 40px auto;
-    }
+        text-align: center;
 
+        h2 {
+            font-family: 'Roboto Mono', monospace;
+            display: inline-block;
+            word-wrap: break-word;
+
+            span {
+                display: inline-block;
+                overflow: hidden;
+                letter-spacing: 2px;
+                animation: typing 2s steps(4, end) infinite, blink .75s step-end infinite;
+                white-space: nowrap;
+                font-size: 30px;
+                font-weight: 700;
+                border-right: 4px solid #fdcb46;
+                box-sizing: border-box;
+            }
+        }
+    }
 }
 
+@keyframes typing {
+    from { 
+        width: 0% 
+    }
+    to { 
+        width: 20% 
+    }
+}
 
+@keyframes blink {
+    from, to { 
+        border-color: transparent 
+    }
+    50% { 
+        border-color: #fdcb46; 
+    }
+}
 
 footer {
     display: flex;
@@ -112,32 +188,61 @@ footer {
     h2 {
         padding: 10px 0;
 
+        &:hover {
+            animation: wiggle 0.3s cubic-bezier(.4, .16, .74, 1.02);
+        }
+
         a {
             text-decoration: none;
             font-size: 1.7rem;
+
         }
+    }
+}
+
+@keyframes wiggle {
+    0% {
+        transform: translateX(2%);
+    }
+
+    25% {
+        transform: translateX(2% * -1);
+    }
+
+    50% {
+        transform: translateX(2%);
+    }
+
+    75% {
+        transform: translateX(2% * -1);
+    }
+
+    100% {
+        transform: translateX(1%);
     }
 }
 
 @media #{$tablet-up} {
 
     .main {
-        button {
+        .button {
             width: 50%;
         }
+
         .singleMenu {
             width: 80%;
             margin: 20px auto 40px auto;
-            
+
         }
     }
-    
+
 }
 
 @media #{$laptop-up} {
     .main {
         margin: 50px 30px 120px 30px;
-        button {
+
+        .button {
             width: 30%;
         }
 
@@ -157,6 +262,7 @@ footer {
         .singleMenu {
             width: 70%;
             margin: 20px auto 40px auto;
+
             img {
                 width: 100%;
                 display: block;
@@ -173,10 +279,11 @@ footer {
 
 }
 
-@media #{$desktop-up}{
+@media #{$desktop-up} {
 
     .main {
-    margin: 50px 30px 170px 30px;
+        margin: 50px 30px 170px 30px;
+
         .gallery {
 
             .gallery-item {
@@ -189,15 +296,15 @@ footer {
         .menuName {
             font-size: 2rem;
         }
-    
+
         .singleMenu {
             // margin: 20px 10px 40px 10px;
             width: 60%;
             margin: 20px auto 40px auto;
-          
+
         }
 
-        button {
+        .button {
             width: 30%;
         }
     }
@@ -209,6 +316,3 @@ footer {
     }
 
 }
-    
-
-

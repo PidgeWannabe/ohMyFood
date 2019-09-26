@@ -51,7 +51,7 @@ td, th {
   font-weight: 400;
 }
 
-.main .singleMenu, .main .gallery .gallery-item a img {
+.main .singleMenu, .main .gallery .gallery-item a img, header + form {
   box-shadow: 1px 1px 10px #6b6b6b;
 }
 
@@ -73,6 +73,25 @@ header #logo {
   font-weight: 700;
   text-align: center;
 }
+header + form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 5px;
+}
+header + form button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+header + form input[type=text] {
+  border-style: none;
+  font-size: 1.5rem;
+  flex-grow: 1;
+}
+header + form input[type=text]:focus {
+  outline: #fdcb46 solid 1px;
+}
 
 .main {
   margin: 5px 5px 150px 5px;
@@ -85,6 +104,12 @@ header #logo {
 .main .gallery .gallery-item {
   width: 500px;
   margin: 20px 10px 10px 10px;
+  transform: scale(1);
+  transition: transform 400ms ease-in-out;
+}
+.main .gallery .gallery-item:hover {
+  transform: scale(1.05);
+  transition: transform 400ms ease-in-out;
 }
 .main .gallery .gallery-item a img {
   width: 100%;
@@ -111,12 +136,19 @@ header #logo {
 }
 .main .singleMenu {
   margin: 20px 10px 40px 10px;
+  transform: scale(1);
+  transition: transform 400ms ease-in-out;
+  cursor: pointer;
+}
+.main .singleMenu:hover {
+  transform: scale(1.1);
+  transition: transform 400ms ease-in-out;
 }
 .main .singleMenu img {
   width: 100%;
   display: block;
 }
-.main button {
+.main .button {
   display: block;
   font-size: 2rem;
   width: 95%;
@@ -126,8 +158,41 @@ header #logo {
   padding: 20px;
   border-style: none;
   margin: 20px auto 40px auto;
+  text-align: center;
+}
+.main .button h2 {
+  font-family: "Roboto Mono", monospace;
+  display: inline-block;
+  word-wrap: break-word;
+}
+.main .button h2 span {
+  display: inline-block;
+  overflow: hidden;
+  letter-spacing: 2px;
+  animation: typing 2s steps(4, end) infinite, blink 0.75s step-end infinite;
+  white-space: nowrap;
+  font-size: 30px;
+  font-weight: 700;
+  border-right: 4px solid #fdcb46;
+  box-sizing: border-box;
 }
 
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 20%;
+  }
+}
+@keyframes blink {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #fdcb46;
+  }
+}
 footer {
   display: flex;
   flex-direction: column;
@@ -141,13 +206,33 @@ footer {
 footer h2 {
   padding: 10px 0;
 }
+footer h2:hover {
+  animation: wiggle 0.3s cubic-bezier(0.4, 0.16, 0.74, 1.02);
+}
 footer h2 a {
   text-decoration: none;
   font-size: 1.7rem;
 }
 
+@keyframes wiggle {
+  0% {
+    transform: translateX(2%);
+  }
+  25% {
+    transform: translateX(-2%);
+  }
+  50% {
+    transform: translateX(2%);
+  }
+  75% {
+    transform: translateX(-2%);
+  }
+  100% {
+    transform: translateX(1%);
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .main button {
+  .main .button {
     width: 50%;
   }
   .main .singleMenu {
@@ -159,7 +244,7 @@ footer h2 a {
   .main {
     margin: 50px 30px 120px 30px;
   }
-  .main button {
+  .main .button {
     width: 30%;
   }
   .main .gallery .gallery-item {
@@ -199,7 +284,7 @@ footer h2 a {
     width: 60%;
     margin: 20px auto 40px auto;
   }
-  .main button {
+  .main .button {
     width: 30%;
   }
 
