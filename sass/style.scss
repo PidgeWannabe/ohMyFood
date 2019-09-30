@@ -53,6 +53,18 @@ header {
     }
 }
 
+@keyframes zoom_menu {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+}
+
 .main {
 
     margin: 5px 5px 150px 5px;
@@ -63,6 +75,8 @@ header {
         flex-wrap: wrap;
         justify-content: center;
 
+
+
         .gallery-item {
             width: 500px;
             margin: 20px 10px 10px 10px;
@@ -71,8 +85,9 @@ header {
 
 
             &:hover {
+                animation: zoom_menu 400ms ease-in-out;
                 transform: scale(1.05);
-                transition: transform 400ms ease-in-out;
+                opacity: 1;
             }
 
             a {
@@ -110,8 +125,9 @@ header {
         cursor: pointer;
 
         &:hover {
-            transform: scale(1.1);
-            transition: transform 400ms ease-in-out;
+            animation: zoom_menu 400ms ease-in-out;
+            transform: scale(1.05);
+            opacity: 1;
         }
 
         img {
@@ -155,20 +171,24 @@ header {
 }
 
 @keyframes typing {
-    from { 
-        width: 0% 
+    from {
+        width: 0%
     }
-    to { 
-        width: 20% 
+
+    to {
+        width: 20%
     }
 }
 
 @keyframes blink {
-    from, to { 
-        border-color: transparent 
+
+    from,
+    to {
+        border-color: transparent
     }
-    50% { 
-        border-color: #fdcb46; 
+
+    50% {
+        border-color: #fdcb46;
     }
 }
 
