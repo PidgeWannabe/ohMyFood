@@ -79,18 +79,21 @@ header + form {
   align-items: center;
   padding: 10px 5px;
 }
-header + form button {
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-}
 header + form input[type=text] {
   border-style: none;
   font-size: 1.5rem;
   width: 60%;
 }
+header + form input[type=text]::placeholder {
+  color: #fdcb46;
+}
 header + form input[type=text]:focus {
   outline: #fdcb46 solid 1px;
+}
+header + form button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 
 @keyframes zoom_menu {
@@ -162,7 +165,7 @@ header + form input[type=text]:focus {
 }
 .main .button {
   display: block;
-  font-size: 2rem;
+  font-size: 1.7rem;
   width: 95%;
   background: #579c87;
   border-radius: 5px;

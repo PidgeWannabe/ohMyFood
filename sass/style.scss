@@ -35,21 +35,28 @@ header {
         @extend %shadow;
         padding: 10px 5px;
 
+        input[type="text"] {
+            border-style: none;
+            font-size: 1.5rem;
+            width: 60%;
+
+            &::placeholder {
+                color: #fdcb46;
+            }
+            
+
+            &:focus {
+                outline: #fdcb46 solid 1px;
+            }
+        }
+
         button {
             cursor: pointer;
             background-color: transparent;
             border: none;
         }
 
-        input[type="text"] {
-            border-style: none;
-            font-size: 1.5rem;
-            width: 60%;
-
-            &:focus {
-                outline: #fdcb46 solid 1px;
-            }
-        }
+        
     }
 }
 
@@ -140,7 +147,7 @@ header {
     .button {
 
         display: block;
-        font-size: 2rem;
+        font-size: 1.7rem;
         width: 95%;
         background: #579c87;
         border-radius: 5px;

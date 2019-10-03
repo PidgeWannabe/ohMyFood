@@ -1,4 +1,4 @@
-@mixin font($fontFamily: Arial, $fontSize: 1rem, $colorFont: #fdcb46 !important, $fontWeight: 400){
+@mixin font($fontFamily: Arial, $fontSize: 1rem, $colorFont: #fdcb46, $fontWeight: 400){
     font-family: #{$fontFamily};
     font-size: #{$fontSize};
     color: #{$colorFont};
