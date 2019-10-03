@@ -24,13 +24,13 @@ header {
     }
 
     #logo {
-        @include font($fontFamily: Arial, $fontSize: 3rem, $colorFont: #fdcb46, $fontWeight: 700);
+        @include font($fontFamily: Arial, $fontSize: 2.7rem, $colorFont: #fdcb46, $fontWeight: 700);
         text-align: center;
     }
 
     &+form {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         @extend %shadow;
         padding: 10px 5px;
@@ -44,7 +44,7 @@ header {
         input[type="text"] {
             border-style: none;
             font-size: 1.5rem;
-            flex-grow: 1;
+            width: 60%;
 
             &:focus {
                 outline: #fdcb46 solid 1px;
