@@ -147,7 +147,7 @@ header {
     .button {
 
         display: block;
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         width: 95%;
         background: #579c87;
         border-radius: 5px;
@@ -183,7 +183,7 @@ header {
     }
 
     to {
-        width: 20%
+        width: 22%
     }
 }
 
@@ -254,6 +254,7 @@ footer {
     .main {
         .button {
             width: 50%;
+            font-size: 1.8rem;
         }
 
         .singleMenu {
@@ -271,6 +272,7 @@ footer {
 
         .button {
             width: 30%;
+            font-size: 1.8rem;
         }
 
         .gallery {
@@ -310,6 +312,11 @@ footer {
 
     .main {
         margin: 50px 30px 170px 30px;
+        
+        .button {
+            
+            font-size: 1.8rem;
+        }
 
         .gallery {
 

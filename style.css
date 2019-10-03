@@ -165,7 +165,7 @@ header + form button {
 }
 .main .button {
   display: block;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   width: 95%;
   background: #579c87;
   border-radius: 5px;
@@ -197,7 +197,7 @@ header + form button {
     width: 0%;
   }
   to {
-    width: 20%;
+    width: 22%;
   }
 }
 @keyframes blink {
@@ -249,6 +249,7 @@ footer h2 a {
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .main .button {
     width: 50%;
+    font-size: 1.8rem;
   }
   .main .singleMenu {
     width: 80%;
@@ -261,6 +262,7 @@ footer h2 a {
   }
   .main .button {
     width: 30%;
+    font-size: 1.8rem;
   }
   .main .gallery .gallery-item {
     width: 500px;
@@ -287,6 +289,9 @@ footer h2 a {
 @media only screen and (min-width: 1600px) {
   .main {
     margin: 50px 30px 170px 30px;
+  }
+  .main .button {
+    font-size: 1.8rem;
   }
   .main .gallery .gallery-item {
     width: 400px;
