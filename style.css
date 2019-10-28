@@ -185,7 +185,12 @@ header + form button {
   text-align: justify;
   padding: 10px;
 }
-.singleMenu hr {
+.singleMenu article .menu-part {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.singleMenu article .menu-part hr {
   border: none;
   height: 5px;
   width: 15%;
@@ -238,6 +243,7 @@ header + form button {
 .noteEnchantee i {
   font-size: 70px;
   background: -webkit-linear-gradient(left, #F15D61, #F6916A);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: block;
@@ -309,7 +315,7 @@ header + form button {
     font-size: 1.8rem;
   }
 
-  .singleMenu hr {
+  .singleMenu article .menu-part hr {
     width: 30%;
   }
 }
@@ -330,8 +336,8 @@ header + form button {
   .singleMenu {
     padding: 70px 70px 10px 70px;
   }
-  .singleMenu hr {
-    width: 35%;
+  .singleMenu article .menu-part hr {
+    width: 30%;
   }
   .singleMenu ul {
     display: flex;
@@ -367,6 +373,9 @@ header + form button {
 
   .singleMenu {
     padding: 140px 140px 10px 140px;
+  }
+  .singleMenu article .menu-part hr {
+    width: 35%;
   }
   .singleMenu hr {
     width: 35%;

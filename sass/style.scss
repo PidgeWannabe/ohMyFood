@@ -162,10 +162,18 @@ header {
     text-align: justify;
     padding: 10px;
 
-    hr {
-        border: none;
-        height: 5px;
-        width: 15%;
+    article {
+        .menu-part {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            hr {
+                border: none;
+                height: 5px;
+                width: 15%;
+            }
+        }
     }
 
 
@@ -225,6 +233,7 @@ header {
     i {
         font-size: 70px;
         background: -webkit-linear-gradient(left, #F15D61, #F6916A);
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         display: block;
@@ -320,8 +329,12 @@ header {
     }
 
     .singleMenu {
-        hr {
-            width: 30%;
+        article {
+            .menu-part {
+                hr {
+                    width: 30%;
+                }
+            }
         }
     }
 }
@@ -350,8 +363,12 @@ header {
     .singleMenu {
         padding: 70px 70px 10px 70px;
 
-        hr {
-            width: 35%;
+        article {
+            .menu-part {
+                hr {
+                    width: 30%;
+                }
+            }
         }
 
         ul {
@@ -398,6 +415,14 @@ header {
 
     .singleMenu {
         padding: 140px 140px 10px 140px;
+
+        article {
+            .menu-part {
+                hr {
+                    width: 35%;
+                }
+            }
+        }
 
         hr {
             width: 35%;
