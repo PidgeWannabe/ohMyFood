@@ -44,20 +44,23 @@ td, th {
   text-align: left;
 }
 
-* {
+body,
+form > button > i,
+#page-footer > h2 > a {
   font-family: Arial;
-  font-size: 1rem;
+  font-size: 1.6rem;
   color: #fdcb46;
   font-weight: 400;
 }
 
-.main .singleMenu, .main .gallery .gallery-item a img, header + form {
+.main .gallery .gallery-item a img, header + form {
   box-shadow: 1px 1px 10px #6b6b6b;
 }
 
-header,
-footer {
+#page-header,
+#page-footer {
   background: #579c87;
+  color: #fdcb46;
 }
 
 header {
@@ -99,15 +102,25 @@ header + form button {
 @keyframes zoom_menu {
   0% {
     transform: scale(1);
-    opacity: 0.5;
+    opacity: 0.2;
   }
   100% {
     transform: scale(1.05);
     opacity: 1;
   }
 }
+.menuName,
+#mentions-legales {
+  font-family: Arial;
+  font-size: 1.6rem;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+  margin: 20px 0 20px 0;
+}
+
 .main {
-  margin: 5px 5px 150px 5px;
+  margin: 0 0 170px 0;
 }
 .main .gallery {
   display: flex;
@@ -139,30 +152,6 @@ header + form button {
   background: #579c87;
   padding: 25px;
 }
-.main .menuName,
-.main #mentions-legales {
-  font-family: Arial;
-  font-size: 1.6rem;
-  color: #000;
-  font-weight: 600;
-  text-align: center;
-  margin-top: 20px;
-}
-.main .singleMenu {
-  margin: 20px 10px 40px 10px;
-  transform: scale(1);
-  transition: transform 400ms ease-in-out;
-  cursor: pointer;
-}
-.main .singleMenu:hover {
-  animation: zoom_menu 400ms ease-in-out;
-  transform: scale(1.05);
-  opacity: 1;
-}
-.main .singleMenu img {
-  width: 100%;
-  display: block;
-}
 .main .button {
   display: block;
   font-size: 1.5rem;
@@ -192,6 +181,71 @@ header + form button {
   box-sizing: border-box;
 }
 
+.singleMenu {
+  text-align: justify;
+  padding: 10px;
+}
+.singleMenu hr {
+  border: none;
+  height: 5px;
+  width: 15%;
+}
+.singleMenu #menu-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.singleMenu #menu-header h3 {
+  font-weight: 700;
+}
+.singleMenu ul:last-child {
+  margin-bottom: 20px;
+}
+.singleMenu .menu-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.singleMenu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0 0 0;
+}
+.singleMenu #menu-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0 40px 0;
+}
+.singleMenu #menu-footer h3 {
+  font-weight: 700;
+}
+.singleMenu #menu-footer i {
+  font-size: 50px;
+}
+.singleMenu #menu-footer h3 {
+  margin-left: 10px;
+}
+
+.noteEnchantee {
+  background-color: #FCDFDB;
+  font-family: Kalam;
+  font-size: 1.6rem;
+  color: #3D1319;
+  font-weight: 300;
+}
+.noteEnchantee i {
+  font-size: 70px;
+  background: -webkit-linear-gradient(left, #F15D61, #F6916A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+}
+.noteEnchantee hr {
+  background: #3D1319;
+}
+
 @keyframes typing {
   from {
     width: 0%;
@@ -208,7 +262,7 @@ header + form button {
     border-color: #fdcb46;
   }
 }
-footer {
+#page-footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -218,13 +272,13 @@ footer {
   width: 100%;
   font-size: 1.7rem;
 }
-footer h2 {
+#page-footer h2 {
   padding: 10px 0;
 }
-footer h2:hover {
+#page-footer h2:hover {
   animation: wiggle 0.3s cubic-bezier(0.4, 0.16, 0.74, 1.02);
 }
-footer h2 a {
+#page-footer h2 a {
   text-decoration: none;
   font-size: 1.7rem;
 }
@@ -247,18 +301,49 @@ footer h2 a {
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .main {
+    margin: 0 20px 170px 20px;
+  }
   .main .button {
     width: 50%;
     font-size: 1.8rem;
   }
-  .main .singleMenu {
-    width: 80%;
-    margin: 20px auto 40px auto;
+
+  .singleMenu hr {
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 865px) and (max-width: 1024px) {
+  .singleMenu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 0 0;
   }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  .menuName {
+    font-size: 2rem;
+  }
+
+  .singleMenu {
+    padding: 70px 70px 10px 70px;
+  }
+  .singleMenu hr {
+    width: 35%;
+  }
+  .singleMenu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 0 0;
+  }
+
   .main {
-    margin: 50px 30px 120px 30px;
+    margin: 0px 40px 120px 40px;
+    padding-top: 0;
   }
   .main .button {
     width: 30%;
@@ -268,27 +353,35 @@ footer h2 a {
     width: 500px;
     margin: 30px;
   }
-  .main .menuName {
-    font-size: 2rem;
-  }
-  .main .singleMenu {
-    width: 70%;
-    margin: 20px auto 40px auto;
-  }
-  .main .singleMenu img {
-    width: 100%;
-    display: block;
-  }
 
-  footer {
+  #page-footer {
     flex-direction: row;
     justify-content: space-between;
     padding: 10px 40px;
   }
 }
 @media only screen and (min-width: 1600px) {
+  .menuName {
+    font-size: 2rem;
+  }
+
+  .singleMenu {
+    padding: 140px 140px 10px 140px;
+  }
+  .singleMenu hr {
+    width: 35%;
+  }
+  .singleMenu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 0 0;
+  }
+
   .main {
-    margin: 50px 30px 170px 30px;
+    margin: 0px 100px 120px 100px;
+    padding-top: 0;
   }
   .main .button {
     font-size: 1.8rem;
@@ -297,18 +390,11 @@ footer h2 a {
     width: 400px;
     margin: 30px;
   }
-  .main .menuName {
-    font-size: 2rem;
-  }
-  .main .singleMenu {
-    width: 60%;
-    margin: 20px auto 40px auto;
-  }
   .main .button {
     width: 30%;
   }
 
-  footer {
+  #page-footer {
     flex-direction: row;
     justify-content: space-between;
     padding: 10px 40px;

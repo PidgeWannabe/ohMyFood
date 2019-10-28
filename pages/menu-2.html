@@ -9,11 +9,15 @@
     <meta name="description"
         content="Projet n°3, Oh My Food, formation Intégration Web avec Openclassrooms par Laurie Detoua">
     <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css?family=Kalam:300,400,700&display=swap&subset=devanagari,latin-ext"
+        rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <a href="../index.html"><h1 id="logo">ohmyfood</h1></a>
+    <header id="page-header">
+        <a href="../index.html">
+            <h1 id="logo">ohmyfood</h1>
+        </a>
     </header>
 
     <form action="#">
@@ -21,18 +25,91 @@
         <button type="submit"><i class="fas fa-search fa-2x"></i></button>
     </form>
 
-    <section class="main">
-        <h2 class="menuName">Le chic à la française</h2>
-        <div class="singleMenu">
-            <img src="../menus/menu-2.png" alt="image du menu La note enchantée">
-        </div>  
+    <h2 class="menuName">Le chic à la française</h2>
+    <section class="main singleMenu noteEnchantee">
+        <header id="menu-header">
+            <h3>Le chic à la française</h3>
+        </header>
+
+        <article id="appetit">
+            <h4 class="menu-title">
+                <hr>Pour se mettre en appétit
+                <hr>
+            </h4>
+            <ul>
+                <li>Tartare de poulpe acidulé aux zests d'orange</li>
+                <li>79€</li>
+            </ul>
+
+            <ul>
+                <li>Velouté de légumes d'antan</li>
+                <li>57€</li>
+            </ul>
+
+            <ul>
+                <li>Soupe à l'oignon revisitée</li>
+                <li>57€</li>
+            </ul>
+        </article>
+
+        <article id="plaisir">
+            <h4 class="menu-title">
+                <hr>Plaisir des papilles
+                <hr>
+            </h4>
+
+            <ul>
+                <li>Coquilles Saint-Jacques accompagnées d'une purée de panais</li>
+                <li>95€</li>
+            </ul>
+
+            <ul>
+                <li>Magret de canard et parmentier de pommes de terres</li>
+                <li>88€</li>
+            </ul>
+
+            <ul>
+                <li>Pigeonneau d'Ille et Vilaine sur son lit de gnocchis aux légumes</li>
+                <li>175</li>
+            </ul>
+        </article>
+
+        <article id="gourmandises">
+            <h4 class="menu-title">
+                <hr>Gourmandises sucrées
+                <hr>
+            </h4>
+
+            <ul>
+                <li>Pétales de violettes glacés et purée de noisettes</li>
+                <li>59€</li>
+            </ul>
+
+            <ul>
+                <li>Fondant au chocolat revisité</li>
+                <li>79€</li>
+            </ul>
+
+            <ul>
+                <li>Millefeuille croustillant</li>
+                <li>90€</li>
+            </ul>
+
+        </article>
+        <footer id="menu-footer">
+            <h3>Le chic à la française</h3>
+        </footer>
+
+
     </section>
 
-    <footer>
+    <footer id="page-footer">
         <h2><a href="mentions-legales.html"> Mentions légales</a></h2>
         <h2><a href="mailto:ohmyfood@contact.org">Contactez-nous</a></h2>
     </footer>
+
     <script src="https://kit.fontawesome.com/a933dd6f58.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

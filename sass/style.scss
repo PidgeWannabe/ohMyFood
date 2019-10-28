@@ -2,8 +2,10 @@
 @import "../libs/mixins.scss";
 @import "../libs/responsive.scss";
 
-* {
-    @include font;
+body,
+form>button>i,
+#page-footer>h2>a {
+    @include font($fontFamily: Arial, $fontSize: 1.6rem, $colorFont: #fdcb46, $fontWeight: 400);
 }
 
 
@@ -11,9 +13,10 @@
     box-shadow: 1px 1px 10px rgb(107, 107, 107);
 }
 
-header,
-footer {
+#page-header,
+#page-footer {
     background: #579c87;
+    color: #fdcb46;
 }
 
 header {
@@ -43,7 +46,7 @@ header {
             &::placeholder {
                 color: #fdcb46;
             }
-            
+
 
             &:focus {
                 outline: #fdcb46 solid 1px;
@@ -56,14 +59,14 @@ header {
             border: none;
         }
 
-        
+
     }
 }
 
 @keyframes zoom_menu {
     0% {
         transform: scale(1);
-        opacity: 0.5;
+        opacity: 0.2;
     }
 
     100% {
@@ -72,17 +75,22 @@ header {
     }
 }
 
+.menuName,
+#mentions-legales {
+    @include font($fontFamily: Arial, $fontSize: 1.6rem, $colorFont: #000, $fontWeight: 600);
+    text-align: center;
+    margin: 20px 0 20px 0;
+}
+
 .main {
 
-    margin: 5px 5px 150px 5px;
+    margin: 0 0 170px 0;
 
     .gallery {
 
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-
-
 
         .gallery-item {
             width: 500px;
@@ -115,33 +123,6 @@ header {
         @include font($fontFamily: Arial, $fontSize: 1.6rem, $colorFont: #fdcb46, $fontWeight: normal);
         background: #579c87;
         padding: 25px;
-    }
-
-    .menuName,
-    #mentions-legales {
-        @include font($fontFamily: Arial, $fontSize: 1.6rem, $colorFont: #000, $fontWeight: 600);
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    .singleMenu {
-        margin: 20px 10px 40px 10px;
-        @extend %shadow;
-        transform: scale(1);
-        transition: transform 400ms ease-in-out;
-        cursor: pointer;
-
-        &:hover {
-            animation: zoom_menu 400ms ease-in-out;
-            transform: scale(1.05);
-            opacity: 1;
-        }
-
-        img {
-            width: 100%;
-            display: block;
-
-        }
     }
 
     .button {
@@ -177,6 +158,85 @@ header {
     }
 }
 
+.singleMenu {
+    text-align: justify;
+    padding: 10px;
+
+    hr {
+        border: none;
+        height: 5px;
+        width: 15%;
+    }
+
+
+    #menu-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+            font-weight: 700;
+        }
+
+    }
+
+    ul:last-child {
+        margin-bottom: 20px;
+    }
+
+    .menu-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0 0 0;
+    }
+
+    #menu-footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0 40px 0;
+
+        h3 {
+            font-weight: 700;
+        }
+
+        i {
+            font-size: 50px;
+        }
+
+        h3 {
+            margin-left: 10px;
+        }
+    }
+}
+
+.noteEnchantee {
+
+    background-color: #FCDFDB;
+    @include font($fontFamily: Kalam, $fontSize: 1.6rem, $colorFont: #3D1319, $fontWeight: 300);
+
+    i {
+        font-size: 70px;
+        background: -webkit-linear-gradient(left, #F15D61, #F6916A);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: block;
+    }
+
+    hr {
+        background: #3D1319;
+    }
+
+
+}
+
 @keyframes typing {
     from {
         width: 0%
@@ -199,7 +259,7 @@ header {
     }
 }
 
-footer {
+#page-footer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -222,7 +282,6 @@ footer {
         a {
             text-decoration: none;
             font-size: 1.7rem;
-
         }
     }
 }
@@ -249,26 +308,64 @@ footer {
     }
 }
 
-@media #{$tablet-up} {
-
+@media #{$small-tablet-up} {
     .main {
+
+        margin: 0 20px 170px 20px;
+
         .button {
             width: 50%;
             font-size: 1.8rem;
         }
+    }
 
-        .singleMenu {
-            width: 80%;
-            margin: 20px auto 40px auto;
+    .singleMenu {
+        hr {
+            width: 30%;
+        }
+    }
+}
 
+@media #{$tablet-up} {
+
+    .singleMenu {
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0 0 0;
         }
     }
 
 }
 
 @media #{$laptop-up} {
+
+    .menuName {
+        font-size: 2rem;
+    }
+
+    .singleMenu {
+        padding: 70px 70px 10px 70px;
+
+        hr {
+            width: 35%;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0 0 0;
+        }
+    }
+
     .main {
-        margin: 50px 30px 120px 30px;
+        margin: 0px 40px 120px 40px;
+        padding-top: 0;
 
         .button {
             width: 30%;
@@ -280,27 +377,11 @@ footer {
             .gallery-item {
                 width: 500px;
                 margin: 30px;
-
             }
         }
-
-        .menuName {
-            font-size: 2rem;
-        }
-
-        .singleMenu {
-            width: 70%;
-            margin: 20px auto 40px auto;
-
-            img {
-                width: 100%;
-                display: block;
-            }
-        }
-
     }
 
-    footer {
+    #page-footer {
         flex-direction: row;
         justify-content: space-between;
         padding: 10px 40px;
@@ -310,11 +391,33 @@ footer {
 
 @media #{$desktop-up} {
 
+    
+    .menuName {
+        font-size: 2rem;
+    }
+
+    .singleMenu {
+        padding: 140px 140px 10px 140px;
+
+        hr {
+            width: 35%;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0 0 0;
+        }
+    }
+
     .main {
-        margin: 50px 30px 170px 30px;
-        
+        margin: 0px 100px 120px 100px;
+        padding-top: 0;
+
         .button {
-            
+
             font-size: 1.8rem;
         }
 
@@ -327,23 +430,12 @@ footer {
             }
         }
 
-        .menuName {
-            font-size: 2rem;
-        }
-
-        .singleMenu {
-            // margin: 20px 10px 40px 10px;
-            width: 60%;
-            margin: 20px auto 40px auto;
-
-        }
-
         .button {
             width: 30%;
         }
     }
 
-    footer {
+    #page-footer {
         flex-direction: row;
         justify-content: space-between;
         padding: 10px 40px;

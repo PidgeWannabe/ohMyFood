@@ -9,30 +9,106 @@
     <meta name="description"
         content="Projet n°3, Oh My Food, formation Intégration Web avec Openclassrooms par Laurie Detoua">
     <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css?family=Kalam:300,400,700&display=swap&subset=devanagari,latin-ext" rel="stylesheet"> 
 </head>
 
 <body>
-    <header>
-        <a href="../index.html"><h1 id="logo">ohmyfood</h1></a>
+    <header id="page-header">
+        <a href="../index.html">
+            <h1 id="logo">ohmyfood</h1>
+        </a>
     </header>
 
     <form action="#">
         <input type="text" placeholder="Rechercher">
         <button type="submit"><i class="fas fa-search fa-2x"></i></button>
     </form>
-    
-    <section class="main">
-        <h2 class="menuName">La palette du goût</h2>
-        <div class="singleMenu">
-            <img src="../menus/menu-4.png" alt="image du menu La note enchantée">
-        </div>  
+
+    <h2 class="menuName">La palette du goût</h2>
+    <section class="main singleMenu noteEnchantee">
+        <header id="menu-header">
+            <h3>La palette du goût</h3>
+        </header>
+
+        <article id="esquisse">
+            <h4 class="menu-title">
+                <hr>Esquisse
+                <hr>
+            </h4>
+            <ul>
+                <li>Fricassée d'escargot au piment d'espelette</li>
+                <li>60€</li>
+            </ul>
+
+            <ul>
+                <li>Oeuf au plat assaisonné à la truffe sur lit de caviar</li>
+                <li>55€</li>
+            </ul>
+
+            <ul>
+                <li>Foie gras de canard mi-cuit et ses copeaux de truffe noire</li>
+                <li>65€</li>
+            </ul>
+        </article>
+
+        <article id="oeuvre">
+            <h4 class="menu-title">
+                <hr>Oeuvre de maître
+                <hr>
+            </h4>
+
+            <ul>
+                <li>Filet de boeuf aux herbes accompagné de sa ribambelle de légumes</li>
+                <li>70€</li>
+            </ul>
+
+            <ul>
+                <li>Parmentier de queue de boeuf à la truffe noire sur sa purée de panais</li>
+                <li>85€</li>
+            </ul>
+
+            <ul>
+                <li>Filet de Turbot aux agrumes</li>
+                <li>125€</li>
+            </ul>
+        </article>
+
+        <article id="sommet">
+            <h4 class="menu-title">
+                <hr>Au sommet de l'art
+                <hr>
+            </h4>
+
+            <ul>
+                <li>Paris-Brest revisité</li>
+                <li>55€</li>
+            </ul>
+
+            <ul>
+                <li>Macarom au chocolat d'exception et glace à la vanille de Madagascar</li>
+                <li>65€</li>
+            </ul>
+
+            <ul>
+                <li>Mousse au chocolat au piment d'espelette et à la truffe noire</li>
+                <li>60€</li>
+            </ul>
+
+        </article>
+        <footer id="menu-footer">
+            <h3>La palette du goût</h3>
+        </footer>
+
+
     </section>
 
-    <footer>
+    <footer id="page-footer">
         <h2><a href="mentions-legales.html"> Mentions légales</a></h2>
         <h2><a href="mailto:ohmyfood@contact.org">Contactez-nous</a></h2>
     </footer>
+
     <script src="https://kit.fontawesome.com/a933dd6f58.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
