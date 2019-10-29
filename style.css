@@ -101,11 +101,9 @@ header + form button {
 
 @keyframes zoom_menu {
   0% {
-    transform: scale(1);
-    opacity: 0.2;
+    opacity: 0;
   }
   100% {
-    transform: scale(1.05);
     opacity: 1;
   }
 }
@@ -131,12 +129,11 @@ header + form button {
   width: 500px;
   margin: 20px 10px 10px 10px;
   transform: scale(1);
-  transition: transform 400ms ease-in-out;
+  transition: transform 400ms cubic-bezier(0, 0.5, 0, 1);
 }
 .main .gallery .gallery-item:hover {
-  animation: zoom_menu 400ms ease-in-out;
+  animation: zoom_menu 500ms ease-in-out;
   transform: scale(1.05);
-  opacity: 1;
 }
 .main .gallery .gallery-item a img {
   width: 100%;
@@ -210,6 +207,19 @@ header + form button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+.singleMenu .menu-title::after {
+  border-top: 2px solid black;
+  content: "";
+  position: absolute;
+  right: 100%;
+  bottom: 2px;
+  left: 0;
+  transition: right 0.4s cubic-bezier(0, 0.5, 0, 1);
+}
+.singleMenu .menu-title:hover::after {
+  right: 0;
 }
 .singleMenu ul {
   display: flex;
@@ -271,17 +281,38 @@ header + form button {
 .chicFrancais #appetit {
   color: #C67412;
 }
+.chicFrancais #appetit .menu-part .menu-title::after {
+  border-color: #C67412;
+}
+.chicFrancais #appetit .menu-part .menu-title:hover::after {
+  right: 0;
+  border-color: #C67412;
+}
 .chicFrancais #appetit hr {
   background: #C67412;
 }
 .chicFrancais #plaisir {
   color: #A56799;
 }
+.chicFrancais #plaisir .menu-part .menu-title::after {
+  border-color: #A56799;
+}
+.chicFrancais #plaisir .menu-part .menu-title:hover::after {
+  right: 0;
+  border-color: #A56799;
+}
 .chicFrancais #plaisir hr {
   background: #A56799;
 }
 .chicFrancais #gourmandises {
   color: #6E4CCC;
+}
+.chicFrancais #gourmandises .menu-part .menu-title::after {
+  border-color: #6E4CCC;
+}
+.chicFrancais #gourmandises .menu-part .menu-title:hover::after {
+  right: 0;
+  border-color: #6E4CCC;
 }
 .chicFrancais #gourmandises hr {
   background: #6E4CCC;
@@ -363,7 +394,7 @@ header + form button {
     width: 0%;
   }
   to {
-    width: 22%;
+    width: 40%;
   }
 }
 @keyframes blink {
