@@ -252,6 +252,112 @@ header + form button {
   background: #3D1319;
 }
 
+.chicFrancais {
+  background-color: #FFF5FE;
+  font-family: Merriweather;
+  font-size: 1.6rem;
+  color: #3D1319;
+  font-weight: 300;
+}
+.chicFrancais #menu-header {
+  background: -webkit-linear-gradient(left, #C67412, #6E4CCC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.chicFrancais article .menu-part {
+  text-align: center;
+}
+.chicFrancais #appetit {
+  color: #C67412;
+}
+.chicFrancais #appetit hr {
+  background: #C67412;
+}
+.chicFrancais #plaisir {
+  color: #A56799;
+}
+.chicFrancais #plaisir hr {
+  background: #A56799;
+}
+.chicFrancais #gourmandises {
+  color: #6E4CCC;
+}
+.chicFrancais #gourmandises hr {
+  background: #6E4CCC;
+}
+.chicFrancais #menu-footer {
+  background: -webkit-linear-gradient(left, #C67412, #6E4CCC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.delicePapilles {
+  background-color: #EDEFEF;
+  font-family: Kalam;
+  font-size: 1.6rem;
+  color: #000;
+  font-weight: 300;
+}
+.delicePapilles #menu-header {
+  font-family: "Petit Formal Script", cursive;
+  background: -webkit-linear-gradient(left, #0228DD, #229DF9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.delicePapilles article .menu-part {
+  text-align: center;
+}
+.delicePapilles #commencer hr {
+  background: #0228DD;
+}
+.delicePapilles #continuer hr {
+  background: #0670F3;
+}
+.delicePapilles #terminer hr {
+  background: #6E4CCC;
+}
+.delicePapilles #menu-footer {
+  font-family: "Petit Formal Script", cursive;
+  background: -webkit-linear-gradient(left, #0228DD, #229DF9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.paletteGout {
+  background-color: #FDFFFD;
+  font-family: Kalam;
+  font-size: 1.6rem;
+  color: #000;
+  font-weight: 300;
+}
+.paletteGout #menu-header {
+  font-family: Kaushan Script, cursive;
+  background: -webkit-linear-gradient(left, #45993E, #B4F679);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.paletteGout article .menu-part {
+  text-align: center;
+}
+.paletteGout article .menu-part hr {
+  background: -webkit-linear-gradient(left, #45993E, #B4F679);
+}
+.paletteGout article .menu-part hr:last-child {
+  background: -webkit-linear-gradient(right, #45993E, #B4F679);
+}
+.paletteGout #menu-footer {
+  font-family: Kaushan Script, cursive;
+  background: -webkit-linear-gradient(left, #45993E, #B4F679);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @keyframes typing {
   from {
     width: 0%;
@@ -336,6 +442,10 @@ header + form button {
   .singleMenu {
     padding: 70px 70px 10px 70px;
   }
+  .singleMenu #menu-header {
+    font-size: 3rem;
+    padding: 80px 0;
+  }
   .singleMenu article .menu-part hr {
     width: 30%;
   }
@@ -373,6 +483,10 @@ header + form button {
 
   .singleMenu {
     padding: 140px 140px 10px 140px;
+  }
+  .singleMenu #menu-header {
+    font-size: 3rem;
+    padding: 80px 0;
   }
   .singleMenu article .menu-part hr {
     width: 35%;

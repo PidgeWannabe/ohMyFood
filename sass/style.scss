@@ -242,10 +242,143 @@ header {
     hr {
         background: #3D1319;
     }
+}
 
+.chicFrancais {
+    background-color: #FFF5FE;
+    @include font($fontFamily: Merriweather, $fontSize: 1.6rem, $colorFont: #3D1319, $fontWeight: 300);
+
+    #menu-header {
+        background: -webkit-linear-gradient(left, #C67412, #6E4CCC);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    article {
+        .menu-part {
+            text-align: center;
+        }
+    }
+
+    #appetit {
+        color: #C67412;
+
+        hr {
+            background: #C67412;
+        }
+    }
+
+    #plaisir {
+        color: #A56799;
+
+        hr {
+            background: #A56799;
+        }
+    }
+
+    #gourmandises {
+        color: #6E4CCC;
+
+        hr {
+            background: #6E4CCC;
+        }
+    }
+
+    #menu-footer {
+        background: -webkit-linear-gradient(left, #C67412, #6E4CCC);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 
 }
 
+
+
+.delicePapilles {
+    background-color: #EDEFEF;
+    @include font($fontFamily: Kalam, $fontSize: 1.6rem, $colorFont: #000, $fontWeight: 300);
+
+    #menu-header {
+        font-family: 'Petit Formal Script', cursive;
+        ;
+        background: -webkit-linear-gradient(left, #0228DD, #229DF9);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    article {
+        .menu-part {
+            text-align: center;
+        }
+    }
+
+    #commencer {
+        hr {
+            background: #0228DD;
+        }
+    }
+
+    #continuer {
+        hr {
+            background: #0670F3;
+        }
+    }
+
+    #terminer {
+        hr {
+            background: #6E4CCC;
+        }
+    }
+
+    #menu-footer {
+        font-family: 'Petit Formal Script', cursive;
+        background: -webkit-linear-gradient(left, #0228DD, #229DF9);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+}
+
+.paletteGout {
+
+    background-color: #FDFFFD;
+    @include font($fontFamily: Kalam, $fontSize: 1.6rem, $colorFont: #000, $fontWeight: 300);
+
+    #menu-header {
+        font-family: Kaushan Script, cursive;
+        background: -webkit-linear-gradient(left, #45993E, #B4F679);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    article {
+        .menu-part {
+
+            text-align: center;
+            hr {
+                background: -webkit-linear-gradient(left, #45993E, #B4F679);
+            }
+
+            hr:last-child {
+                background: -webkit-linear-gradient(right, #45993E, #B4F679);
+            }
+        }
+    }
+
+    #menu-footer {
+        font-family: Kaushan Script, cursive;
+        background: -webkit-linear-gradient(left, #45993E, #B4F679);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+}
 @keyframes typing {
     from {
         width: 0%
@@ -358,10 +491,16 @@ header {
 
     .menuName {
         font-size: 2rem;
+
     }
 
     .singleMenu {
         padding: 70px 70px 10px 70px;
+
+        #menu-header {
+            font-size: 3rem;
+            padding: 80px 0;
+        }
 
         article {
             .menu-part {
@@ -408,13 +547,18 @@ header {
 
 @media #{$desktop-up} {
 
-    
+
     .menuName {
         font-size: 2rem;
     }
 
     .singleMenu {
         padding: 140px 140px 10px 140px;
+
+        #menu-header {
+            font-size: 3rem;
+            padding: 80px 0;
+        }
 
         article {
             .menu-part {
