@@ -132,7 +132,7 @@ header + form button {
   transition: transform 400ms cubic-bezier(0, 0.5, 0, 1);
 }
 .main .gallery .gallery-item:hover {
-  animation: zoom_menu 500ms ease-in-out;
+  animation: zoom_menu 700ms ease-in-out;
   transform: scale(1.05);
 }
 .main .gallery .gallery-item a img {
@@ -252,10 +252,9 @@ header + form button {
 }
 .noteEnchantee i {
   font-size: 70px;
-  background: -webkit-linear-gradient(left, #F15D61, #F6916A);
-  background-clip: text;
+  background: linear-gradient(to right, #F15D61, #F6916A);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
   display: block;
 }
 .noteEnchantee hr {
@@ -270,10 +269,9 @@ header + form button {
   font-weight: 300;
 }
 .chicFrancais #menu-header {
-  background: -webkit-linear-gradient(left, #C67412, #6E4CCC);
-  background-clip: text;
+  background: linear-gradient(to right, #C67412, #6E4CCC);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 .chicFrancais article .menu-part {
   text-align: center;
@@ -318,10 +316,9 @@ header + form button {
   background: #6E4CCC;
 }
 .chicFrancais #menu-footer {
-  background: -webkit-linear-gradient(left, #C67412, #6E4CCC);
-  background-clip: text;
+  background: linear-gradient(to right, #C67412, #6E4CCC);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .delicePapilles {
@@ -333,10 +330,9 @@ header + form button {
 }
 .delicePapilles #menu-header {
   font-family: "Petit Formal Script", cursive;
-  background: -webkit-linear-gradient(left, #0228DD, #229DF9);
-  background-clip: text;
+  background: linear-gradient(to right, #0228DD, #229DF9);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 .delicePapilles article .menu-part {
   text-align: center;
@@ -352,10 +348,9 @@ header + form button {
 }
 .delicePapilles #menu-footer {
   font-family: "Petit Formal Script", cursive;
-  background: -webkit-linear-gradient(left, #0228DD, #229DF9);
-  background-clip: text;
+  background: linear-gradient(to right, #0228DD, #229DF9);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .paletteGout {
@@ -366,27 +361,25 @@ header + form button {
   font-weight: 300;
 }
 .paletteGout #menu-header {
-  font-family: Kaushan Script, cursive;
-  background: -webkit-linear-gradient(left, #45993E, #B4F679);
-  background-clip: text;
+  font-family: "Kaushan Script", cursive;
+  background: linear-gradient(to right, #45993E, #B4F679);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 .paletteGout article .menu-part {
   text-align: center;
 }
 .paletteGout article .menu-part hr {
-  background: -webkit-linear-gradient(left, #45993E, #B4F679);
+  background: linear-gradient(to right, #45993E, #B4F679);
 }
 .paletteGout article .menu-part hr:last-child {
-  background: -webkit-linear-gradient(right, #45993E, #B4F679);
+  background: linear-gradient(to left, #45993E, #B4F679);
 }
 .paletteGout #menu-footer {
-  font-family: Kaushan Script, cursive;
-  background: -webkit-linear-gradient(left, #45993E, #B4F679);
-  background-clip: text;
+  font-family: "Kaushan Script", cursive;
+  background: linear-gradient(to right, #45993E, #B4F679);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 @keyframes typing {

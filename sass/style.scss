@@ -98,7 +98,7 @@ header {
 
 
             &:hover {
-                animation: zoom_menu 500ms ease-in-out;
+                animation: zoom_menu 700ms ease-in-out;
                 transform: scale(1.05);
             }
 
@@ -245,10 +245,9 @@ header {
 
     i {
         font-size: 70px;
-        background: -webkit-linear-gradient(left, #F15D61, #F6916A);
-        background-clip: text;
+        background: linear-gradient(to right, #F15D61, #F6916A);
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: transparent;
         display: block;
     }
 
@@ -262,10 +261,9 @@ header {
     @include font($fontFamily: Merriweather, $fontSize: 1.6rem, $colorFont: #3D1319, $fontWeight: 300);
 
     #menu-header {
-        background: -webkit-linear-gradient(left, #C67412, #6E4CCC);
-        background-clip: text;
+        background: linear-gradient(to right, #C67412, #6E4CCC);
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: transparent;
     }
 
     article {
@@ -344,10 +342,9 @@ header {
     }
 
     #menu-footer {
-        background: -webkit-linear-gradient(left, #C67412, #6E4CCC);
-        background-clip: text;
+        background: linear-gradient(to right, #C67412, #6E4CCC);
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: transparent;
     }
 
 }
@@ -360,11 +357,9 @@ header {
 
     #menu-header {
         font-family: 'Petit Formal Script', cursive;
-        ;
-        background: -webkit-linear-gradient(left, #0228DD, #229DF9);
-        background-clip: text;
+        background: linear-gradient(to right, #0228DD, #229DF9);
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: transparent;
     }
 
     article {
@@ -393,10 +388,9 @@ header {
 
     #menu-footer {
         font-family: 'Petit Formal Script', cursive;
-        background: -webkit-linear-gradient(left, #0228DD, #229DF9);
-        background-clip: text;
+        background: linear-gradient(to right, #0228DD, #229DF9);
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: transparent;
     }
 
 }
@@ -407,11 +401,10 @@ header {
     @include font($fontFamily: Kalam, $fontSize: 1.6rem, $colorFont: #000, $fontWeight: 300);
 
     #menu-header {
-        font-family: Kaushan Script, cursive;
-        background: -webkit-linear-gradient(left, #45993E, #B4F679);
-        background-clip: text;
+        font-family: 'Kaushan Script', cursive;
+        background: linear-gradient(to right, #45993E, #B4F679);
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: transparent;
     }
 
     article {
@@ -419,21 +412,20 @@ header {
 
             text-align: center;
             hr {
-                background: -webkit-linear-gradient(left, #45993E, #B4F679);
+                background: linear-gradient(to right, #45993E, #B4F679);
             }
 
             hr:last-child {
-                background: -webkit-linear-gradient(right, #45993E, #B4F679);
+                background: linear-gradient(to left, #45993E, #B4F679);
             }
         }
     }
 
     #menu-footer {
-        font-family: Kaushan Script, cursive;
-        background: -webkit-linear-gradient(left, #45993E, #B4F679);
-        background-clip: text;
+        font-family: 'Kaushan Script', cursive;
+        background: linear-gradient(to right, #45993E, #B4F679);
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: transparent;
     }
 
 }
