@@ -132,7 +132,7 @@ header + form button {
   transition: transform 400ms cubic-bezier(0, 0.5, 0, 1);
 }
 .main .gallery .gallery-item:hover {
-  animation: zoom_menu 700ms ease-in-out;
+  animation: zoom_menu 650ms ease-in-out;
   transform: scale(1.05);
 }
 .main .gallery .gallery-item a img {
