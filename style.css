@@ -128,7 +128,6 @@ header + form button {
 .main .gallery .gallery-item {
   width: 500px;
   margin: 20px 10px 10px 10px;
-  transform: scale(1);
   transition: transform 400ms cubic-bezier(0, 0.5, 0, 1);
 }
 .main .gallery .gallery-item:hover {
@@ -213,7 +212,6 @@ header + form button {
   border-top: 2px solid black;
   content: "";
   position: absolute;
-  right: 100%;
   bottom: 2px;
   left: 0;
   transition: right 0.4s cubic-bezier(0, 0.5, 0, 1);
@@ -391,7 +389,7 @@ header + form button {
   }
 }
 @keyframes blink {
-  from, to {
+  from {
     border-color: transparent;
   }
   50% {
@@ -404,7 +402,7 @@ header + form button {
   align-items: center;
   padding: 10px 0;
   position: fixed;
-  bottom: 0px;
+  bottom: 0;
   width: 100%;
   font-size: 1.7rem;
 }
@@ -533,8 +531,12 @@ header + form button {
   .main .button {
     font-size: 1.8rem;
   }
+  .main .gallery {
+    max-width: 1400px;
+    margin: auto;
+  }
   .main .gallery .gallery-item {
-    width: 400px;
+    width: 500px;
     margin: 30px;
   }
   .main .button {
